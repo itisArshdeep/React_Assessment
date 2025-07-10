@@ -6,7 +6,9 @@ import bow from '../../images/bow.png';
 import arrow from '../../images/arrow.png';
 
 // project data & type
-import projects, { Project } from '../../assets/projects';
+import projects from '../../assets/projects';
+import type { Project } from '../../assets/projects';
+
 
 const Projects: React.FC = () => {
   return (
