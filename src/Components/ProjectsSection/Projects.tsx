@@ -9,7 +9,6 @@ import arrow from '../../images/arrow.png';
 import projects from '../../assets/projects';
 import type { Project } from '../../assets/projects';
 
-
 const Projects: React.FC = () => {
   return (
     <div id='projects' className='mywork'>
@@ -19,12 +18,18 @@ const Projects: React.FC = () => {
       </div>
       <div className='mywork-container'>
         {projects.map((project: Project) => (
-          <img
+          <a
             key={project.p_no}
-            src={project.p_img}
-            alt={project.p_name}
+            href={project.p_link}
+            target='_blank'
+            rel='noopener noreferrer'
             title={project.p_name}
-          />
+          >
+            <img
+              src={project.p_img}
+              alt={project.p_name}
+            />
+          </a>
         ))}
       </div>
       <div className='mywork-showmore'>
